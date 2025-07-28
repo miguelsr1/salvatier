@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+    </f:facet>
+    <title>Salvatier</title>
+    <script type="text/javascript">
+        $(function () {
+            var testimonials = $('.testimonials-content');
+            $('.point').on('click', function (e) {
+                var point = $(this);
+
+                point.siblings('.active-point').removeClass('active-point');
+                point.addClass('active-point');
+
+                if (point.hasClass('point-1')) {
+                    testimonials.css('transform', 'translate3d(0, 0, 0)');
+                } else if (point.hasClass('point-2')) {
+                    testimonials.css('transform', 'translate3d(-100%, 0, 0)');
+                } else if (point.hasClass('point-3')) {
+                    testimonials.css('transform', 'translate3d(-200%, 0, 0)');
+                } else if (point.hasClass('point-4')) {
+                    testimonials.css('transform', 'translate3d(-200%, 0, 0)');
+                } else if (point.hasClass('point-5')) {
+                    testimonials.css('transform', 'translate3d(-300%, 0, 0)');
+                } else if (point.hasClass('point-6')) {
+                    testimonials.css('transform', 'translate3d(-400%, 0, 0)');
+                } else if (point.hasClass('point-7')) {
+                    testimonials.css('transform', 'translate3d(-500%, 0, 0)');
+                } else if (point.hasClass('point-8')) {
+                    testimonials.css('transform', 'translate3d(-600%, 0, 0)');
+                } else if (point.hasClass('point-9')) {
+                    testimonials.css('transform', 'translate3d(-700%, 0, 0)');
+                }
+
+                e.preventDefault();
+            });
+        });
+    </script>
+</h:head>
+
+<h:body styleClass="landing-body">
+
+    <div class="landing-wrapper">
+        <div class="landing-topbar" style="background: #036554 !important;">
+            <h:link styleClass="logo">
+                <p:graphicImage name="logo.png" library="images"/>
+            </h:link>
+
+            <ul class="landing-menu">
+                <li>
+                    <a href="#" id="landing-menu-close">
+                        <i class="pi pi-times"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#home">Equipo</a>
+                </li>
+                <li>
+                    <a href="#features">Misión y valores</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Servicios</a>
+                </li>
+                <li>
+                    <a href="#pricing">Comentarios</a>
+                </li>
+                <li>
+                    <a class="contact" href="#contact">Preguntas frecuentes</a>
+                </li>
+                <li>
+                    <a class="contact" href="#contact">Ubicación</a>
+                </li>
+            </ul>
+            <p:commandButton value="Registrarse" style="margin-right: 2rem; padding: 1rem; background-color: white"
+                             styleClass="rounded-button rounded-button ui-button-secondary ui-button-outlined"/>
+        </div>
+
+        <ui:include src="public/fragmento/landing/home.xhtml"/>
+
+        <div style="height: 1rem; background: #C8AE80;"/>
+
+        <ui:include src="public/fragmento/landing/equipo-juridico.xhtml"/>
+
+        <ui:include src="public/fragmento/landing/mision-vision.xhtml"/>
+
+        <ui:include src="public/fragmento/landing/servicios-juridicos.xhtml"/>
+
+
+        <div id="features" class="landing-features">
+            <div class="section-header">
+                <h2>Features</h2>
+                <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
+            </div>
+
+            <div class="features-content">
+                <div class="grid features-cards grid-nogutter">
+                    <div class="col-12 md:col-6 xl:col-3">
+                        <div class="feature-card responsive">
+                            <p:graphicImage name="images/landing/responsive.svg" library="poseidon-layout"/>
+                            <h5>Responsive Layout</h5>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-3">
+                        <div class="feature-card design">
+                            <p:graphicImage name="images/landing/design.svg" library="poseidon-layout"/>
+                            <h5>Modern Design</h5>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-3">
+                        <div class="feature-card documented">
+                            <p:graphicImage name="images/landing/documented.svg" library="poseidon-layout"/>
+                            <h5>Well Documented</h5>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-3">
+                        <div class="feature-card cleancode">
+                            <p:graphicImage name="images/landing/code.svg" library="poseidon-layout"/>
+                            <h5>Clean Code </h5>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="testimonials" class="landing-testimonials">
+            <div class="section-header">
+                <h2>Testimonials</h2>
+                <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
+            </div>
+            <div class="testimonials">
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-content">
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Maecenas rutrum, orci nec lacinia auctor, enim lectus condimentum magna, pulvinar laoreet augue magna a turpis. Quisque id accumsan nulla. Nulla tempus est libero, ut mattis dui ullamcorper."</span>
+                                <h5>Trienke van Aartsen</h5>
+                                <h6>Porto</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Quisque a dui porta, volutpat metus sit amet, tincidunt velit. Suspendisse consequat lectus dui, sed ornare diam luctus vitae. In sapien risus, efficitur in mattis vitae, aliquam in lectus."</span>
+                                <h5>Xenie Doleželová</h5>
+                                <h6>Rabat</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Nulla auctor dignissim nunc, ut aliquam eros tincidunt et. Cras facilisis ex in ligula placerat venenatis. Vestibulum vitae tortor libero. Aenean venenatis tempor pretium. Pellentesque eget consectetur libero."</span>
+                                <h5>Abbie Wilson</h5>
+                                <h6>Belgrade</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Fusce hendrerit turpis lacus, et hendrerit magna tristique congue. Pellentesque lacus magna, consectetur eget orci id, ultricies euismod nisl. Donec turpis justo, semper id porttitor nec, ultrices eu."</span>
+                                <h5>Afonso Pinto</h5>
+                                <h6>Tbilisi</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Quisque a dui porta, volutpat metus sit amet, tincidunt velit. Suspendisse consequat lectus dui, sed ornare diam luctus vitae. In sapien risus, efficitur in mattis vitae, aliquam in lectus."</span>
+                                <h5>Bernd Pfefferberg</h5>
+                                <h6>Budapest</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Nam vel ipsum diam. Suspendisse egestas hendrerit ante, at aliquet enim condimentum vel. Sed rhoncus scelerisque arcu sed placerat. Quisque diam felis, condimentum quis mollis a, placerat vel."</span>
+                                <h5>Maria Illescas</h5>
+                                <h6>Edinburgh</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Ut dapibus diam at tortor ultrices, vel pretium nibh mollis. Praesent porta tellus at ipsum suscipit scelerisque. Donec lorem nulla, commodo ut dolor id, laoreet varius sem. Quisque."</span>
+                                <h5>Meng Ru</h5>
+                                <h6>Hangzhou</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial ">
+                            <div class="testimonial-content">
+                                <span>"Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In accumsan magna ac arcu porttitor, vel rutrum erat cursus. Maecenas cursus purus scelerisque, hendrerit quam."</span>
+                                <h5>Sun Jun</h5>
+                                <h6>Kinshasa</h6>
+                            </div>
+                        </div>
+                        <div class="testimonial  ">
+                            <div class="testimonial-content">
+                                <span>"Aliquam commodo scelerisque metus nec viverra. Pellentesque dapibus vehicula ligula. Suspendisse ullamcorper elit ut ultrices venenatis. Sed vitae suscipit libero. Donec bibendum ex ac augue mollis, vel malesuada."</span>
+                                <h5>Thoma Fulloway</h5>
+                                <h6>Memphis</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="link-points">
+                        <div class="points">
+                            <div class=" point point-1 active-point"></div>
+                            <div class=" point point-2 "></div>
+                            <div class=" point point-3 "></div>
+                            <div class=" point point-4 mobile "></div>
+                            <div class=" point point-5 mobile"></div>
+                            <div class=" point point-6 mobile"></div>
+                            <div class=" point point-7 mobile"></div>
+                            <div class=" point point-8 mobile"></div>
+                            <div class=" point point-9 mobile"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="contact" class="landing-contact">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
+            </div>
+            <div class="landing-contact-content">
+                <div class="landing-contact-form">
+                    <p:inputText id="name" placeholder="Full Name"/>
+                    <p:inputText id="email" placeholder="Email"/>
+                    <p:inputTextarea rows="8" placeholder="Your Message" autoResize="false"/>
+                    <p:commandButton type="button" value="SEND MESSAGE" styleClass="ui-button-info"/>
+                </div>
+            </div>
+
+        </div>
+        <div class="landing-footer">
+
+            <div class="social-icons">
+                <a><i class="fa fa-github"></i></a>
+                <a><i class="fa fa-facebook"></i></a>
+                <a><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <h:outputStylesheet name="css/primeflex.min.css" library="poseidon-layout"/>
+    <h:outputStylesheet name="css/primeicons.css" library="poseidon-layout"/>
+    <h:outputStylesheet name="css/layout-light.css" library="poseidon-layout"/>
+    <h:outputStylesheet name="custom.css" library="css"/>
+    <h:outputStylesheet name="landing.css" library="css"/>
+
+    <script type="text/javascript">
+
+        hideMenu = function () {
+            $('.landing-menu').removeClass('fadeInDown').addClass('fadeOutUp');
+
+            setTimeout(function () {
+                $('.landing-wrapper').removeClass('landing-menu-active');
+                $('.landing-menu').removeClass('fadeOutUp');
+                $(document.body).removeClass('block-scroll');
+            }, 150);
+        }
+
+        showMenu = function () {
+            $('.landing-wrapper').addClass('landing-menu-active');
+            $('.landing-menu').addClass('fadeInDown');
+            $(document.body).addClass('block-scroll');
+        }
+
+        $(function () {
+            $('#landing-menu-button').on('click', function (e) {
+                var wrapper = $('.landing-wrapper');
+
+                if (wrapper.hasClass('landing-menu-active'))
+                    hideMenu();
+                else
+                    showMenu();
+
+                e.preventDefault();
+            });
+
+            $('.landing-menu').find('a').on('click', function (e) {
+                hideMenu();
+            });
+        });
+
+        $(function () {
+            var testimonials = $('.testimonials-content');
+            $('.point').on('click', function (e) {
+                var point = $(this);
+
+                point.siblings('.active-point').removeClass('active-point');
+                point.addClass('active-point');
+
+                if (point.hasClass('point-1')) {
+                    testimonials.css('transform', 'translate3d(0, 0, 0)');
+                } else if (point.hasClass('point-2')) {
+                    testimonials.css('transform', 'translate3d(-100%, 0, 0)');
+                } else if (point.hasClass('point-3')) {
+                    testimonials.css('transform', 'translate3d(-200%, 0, 0)');
+                }
+
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        //<![CDATA[
+        var $this = this;
+
+        $(document).ready(function () {
+            $('html').animate({scrollTop: 0}, 1);
+            $('body').animate({scrollTop: 0}, 1);
+        });
+
+        /* Scroll Animate */
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            var target = $(this.hash);
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 500);
+                return false;
+            }
+        });//]]>
+    </script>
+</h:body>
+
+</html>

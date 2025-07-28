@@ -1,0 +1,35 @@
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:h="jakarta.faces.html"
+              xmlns:f="jakarta.faces.core"
+              xmlns:p="http://primefaces.org/ui"
+              xmlns:ui="jakarta.faces.facelets">
+    <div id="pricing" class="landing-pricing" style="position: relative;">
+        <div class="section-header"
+             style="margin: 2rem; background-color: #E6F5F0; left: 50.5px; border-radius: 30px; padding-top: 30px; padding-right: 30px; padding-bottom: 141px; padding-left: 30px;">
+            <span style="font-size: 5rem; font-weight: bold">Equipo jurídico</span>
+            <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
+        </div>
+
+        <p:carousel value="#{applicacionView.planillas}" var="planilla" style="transform: translate(0%, -26%)" numVisible="3">
+            <div class="pricing-cards grid grid-nogutter" style="transform: translate(0%, 0%)">
+                <div class="shadow-2 p-5 mb-2 lg:mb-0 mr-0 lg:mr-2 surface-card"
+                     style="text-align: center;">
+                    <p:graphicImage name="staff/abogado1.png" library="images"/>
+                    <div class="flex justify-content-between align-items-center">
+                        <div class="pr-3">
+                            <div class="text-xl text-900 font-medium mb-2">#{planilla.tituloAbre} #{planilla.nombres} #{planilla.apellidos}</div>
+                            <div class="text-blue-600 fuente-color">#{planilla.especialista}</div>
+                            <p:spacer height="2rem"/>
+                        </div>
+                    </div>
+                    <div style="vertical-align: bottom">
+                        <p:commandButton value="Leer más" styleClass="rounded-button ui-button-success"
+                                         style="padding: 0.5rem; width: 150px; background: #036554;"/>
+                    </div>
+                </div>
+            </div>
+        </p:carousel>
+
+
+    </div>
+</ui:component>
