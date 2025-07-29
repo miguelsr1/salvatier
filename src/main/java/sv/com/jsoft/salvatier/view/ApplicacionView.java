@@ -8,9 +8,11 @@ import lombok.Getter;
 import sv.com.jsoft.salvatier.model.InformacionEmpresa;
 import sv.com.jsoft.salvatier.model.MisionVision;
 import sv.com.jsoft.salvatier.model.Planilla;
+import sv.com.jsoft.salvatier.model.Servicio;
 import sv.com.jsoft.salvatier.repository.InformacionEmpresaRepo;
 import sv.com.jsoft.salvatier.repository.MisionVisionRepo;
 import sv.com.jsoft.salvatier.repository.PlanillaRepo;
+import sv.com.jsoft.salvatier.repository.ServicioRepo;
 
 import java.util.List;
 
@@ -24,6 +26,8 @@ public class ApplicacionView {
     private MisionVision misionVision;
     @Getter
     private List<Planilla> planillas;
+    @Getter
+    private List<Servicio> servicios;
 
     @Inject
     private InformacionEmpresaRepo informacionEmpresaRepo;
@@ -31,6 +35,8 @@ public class ApplicacionView {
     private MisionVisionRepo misionVisionRepo;
     @Inject
     private PlanillaRepo planillaRepo;
+    @Inject
+    private ServicioRepo servicioRepo;
 
 
     @PostConstruct
@@ -42,5 +48,6 @@ public class ApplicacionView {
         informacionEmpresa = informacionEmpresaRepo.findByPk(1);
         misionVision = misionVisionRepo.findByPk(1);
         planillas = planillaRepo.findAll();
+        servicios = servicioRepo.findAll();
     }
 }

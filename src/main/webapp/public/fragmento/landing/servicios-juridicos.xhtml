@@ -6,8 +6,49 @@
     <div id="pricing" class="landing-pricing" style="position: relative;">
         <div class="section-header"
              style="margin: 2rem; background-color: #E6F5F0; left: 50.5px; border-radius: 30px; padding-top: 30px; padding-right: 30px; padding-bottom: 141px; padding-left: 30px;">
-            <span style="font-size: 5rem; font-weight: bold">Servicios jurídicos</span>
-            <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
+            <span style="font-size: 5rem; font-weight: bold; margin-bottom: 2rem">Servicios jurídicos</span>
+            <div class="grid dashboard" style="width: 100%">
+                <ui:repeat value="#{applicacionView.servicios}" var="ser">
+                    <div class="col-4 md:col-4">
+                        <div class="card overview-box blue">
+                            <h5 style="font-weight: bold; text-align: left !important">#{ser.titulo}</h5>
+                            <span><p:outputLabel value="#{ser.descripcion}" escape="false"/></span>
+                            <div class="footer">
+                                <p:commandButton value="Agendar" styleClass="rounded-button ui-button-success"
+                                                 style="padding: 0.5rem; width: 150px; background: #036554; margin-top: 2rem"/>
+                            </div>
+                        </div>
+                    </div>
+                </ui:repeat>
+                <!--div class="col-4 md:col-4">
+                    <div class="card overview-box green">
+                        <i class="pi pi-dollar"></i>
+                        <h5>Today's Sales</h5>
+                        <span>$784.00 sales so far</span>
+                    </div>
+                </div>
+                <div class="col-4 md:col-4">
+                    <div class="card overview-box orange">
+                        <i class="pi pi-tag"></i>
+                        <h5>Open Orders</h5>
+                        <span>14 Pending Orders</span>
+                    </div>
+                </div>
+                <div class="col-4 md:col-4">
+                    <div class="card overview-box lime">
+                        <i class="pi pi-money-bill"></i>
+                        <h5>Total Balance</h5>
+                        <span>$87,974.00</span>
+                    </div>
+                </div>
+                <div class="col-4 md:col-4">
+                    <div class="card overview-box purple">
+                        <i class="pi pi-envelope"></i>
+                        <h5>Buyer Messages</h5>
+                        <span>1 Unread Message</span>
+                    </div>
+                </div-->
+            </div>
         </div>
 
 

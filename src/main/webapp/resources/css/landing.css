@@ -11,16 +11,20 @@
     background-size: 150%;
     background-position: center center;
 }
-
 .landing-wrapper .landing-mision-vision .value-mision-vision {
     padding: 0 100px 0 100px;
     background: #03655480;
     border-radius: 50px;
 }
-
 .landing-wrapper .landing-mision-vision .value-mision-vision h6 {
     color: #ffffff !important;
 }
 .landing-wrapper .landing-mision-vision .value-mision-vision h1 {
     color: #C8AE80 !important;
+}
+.ui-outputlabel .ui-outputlabel-label {
+    text-align: justify !important;
+}
+.landing-wrapper .landing-pricing .section-header {
+    text-align: justify !important;
 }
