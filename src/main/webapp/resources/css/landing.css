@@ -4,27 +4,128 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-align: center;
-    align-items: center;
     padding: 60px 120px;
-    background-image: url("#{resource['images/banner-landing.webp']}");
+    background-image: url("#{resource['images/mision-vision.webp']}");
     background-repeat: no-repeat;
-    background-size: 150%;
     background-position: center center;
+    aspect-ratio: 19 / 8;
+    /*
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-image: url("#{resource['images/mision-vision.webp']}");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    padding: 10rem;
+    */
 }
-.landing-wrapper .landing-mision-vision .value-mision-vision {
-    padding: 0 100px 0 100px;
+
+.faq-question {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1rem;
+}
+
+.value-mision-vision {
+    padding-right: 20rem;
+    padding-left: 20rem;
     background: #03655480;
     border-radius: 50px;
+    text-align: justify;
 }
+
+.style-mision-vision {
+    color: #C8AE80;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
 .landing-wrapper .landing-mision-vision .value-mision-vision h6 {
     color: #ffffff !important;
 }
+
 .landing-wrapper .landing-mision-vision .value-mision-vision h1 {
     color: #C8AE80 !important;
 }
+
 .ui-outputlabel .ui-outputlabel-label {
     text-align: justify !important;
 }
+
 .landing-wrapper .landing-pricing .section-header {
     text-align: justify !important;
+}
+
+.ing-testimonios{
+    z-index: 0;
+}
+
+.ing-testimonios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("#{resource['images/testimonio-fondo.webp']}");
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(10px);
+}
+
+.contenido-difuminado {
+    /*background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco con 30% de opacidad
+    backdrop-filter: blur(10px); /* El valor en píxeles determina la intensidad del difuminado
+    -webkit-backdrop-filter: blur(10px); /* Prefijo para mayor compatibilidad con navegadores
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;*/
+}
+
+.label-section {
+    font-family: Montserrat;
+    color: rgba(200, 174, 128, 1);
+    font-weight: 800;
+    font-size: 80px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.landing-wrapper .preguntas {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 60px 120px;
+    background-image: url("#{resource['images/preguntas.webp']}");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.col-preguntas {
+    flex: 1; /* Ocupa mismo ancho si no se especifica uno */
+    border: 0px solid #000;
+    box-sizing: border-box;
+}
+
+.col-pregunta-dercha {
+    flex: 1; /* Ocupa mismo ancho si no se especifica uno */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }

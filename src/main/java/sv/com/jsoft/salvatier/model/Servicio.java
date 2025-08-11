@@ -44,4 +44,7 @@ public class Servicio {
     @JoinColumn(name = "id_empresa")
     private InformacionEmpresa idEmpresa;
 
+    @Transient
+    private Boolean verMas = false;
+
 }

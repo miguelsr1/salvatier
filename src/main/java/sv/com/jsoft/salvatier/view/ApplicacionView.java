@@ -2,9 +2,11 @@ package sv.com.jsoft.salvatier.view;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.faces.application.FacesMessage;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import lombok.Getter;
+import org.primefaces.PrimeFaces;
 import sv.com.jsoft.salvatier.model.InformacionEmpresa;
 import sv.com.jsoft.salvatier.model.MisionVision;
 import sv.com.jsoft.salvatier.model.Planilla;
@@ -49,5 +51,10 @@ public class ApplicacionView {
         misionVision = misionVisionRepo.findByPk(1);
         planillas = planillaRepo.findAll();
         servicios = servicioRepo.findAll();
+    }
+
+    public void toogle(Servicio ser) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, ser.getTitulo(), ser.getDescripcion());
+        PrimeFaces.current().dialog().showMessageDynamic(message, false);
     }
 }

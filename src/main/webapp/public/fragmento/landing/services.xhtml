@@ -1,0 +1,42 @@
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:h="jakarta.faces.html"
+              xmlns:f="jakarta.faces.core"
+              xmlns:jsf="jakarta.faces.html"
+              xmlns:p="http://primefaces.org/ui"
+              xmlns:ui="jakarta.faces.facelets">
+    <h:body styleClass="landing-body" style="max-width: 1935px; margin: 0 auto">
+
+        <div id="services" class="landing-pricing" style="position: relative;">
+            <div class="section-header"
+                 style="background-color: #E6F5F0; border-radius: 30px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
+                <p><span style="font-size: 5rem; font-weight: bold; margin-bottom: 2rem">Servicios</span><span style="font-size: 5rem; font-weight: bold; color: #036554;"> jurídicos</span></p>
+                <div class="grid dashboard" style="width: 100%">
+                    <ui:repeat value="#{applicacionView.servicios}" var="ser">
+                        <div class="col-4 md:col-4">
+                            <div class="card" id="dvTextoServicio">
+                                <div class="card-header" style="height: 4rem">
+                                    <h5 style="font-weight: bold; text-align: left !important">#{ser.titulo}</h5>
+                                </div>
+                                <div class="slide-row-wrapper" style="height: 8rem">
+                            <span>
+                                <p:outputLabel value="#{ser.descripcion.substring(0, 120)} ..." escape="false"
+                                               rendered="#{!ser.verMas}"/>
+                                <p:outputLabel value="#{ser.descripcion} ..." escape="false" rendered="#{ser.verMas}"/>
+                            </span>
+                                    <p:commandLink value="#{ser.verMas ? 'Ver menos' : 'Ver más'}"
+                                                   actionListener="#{applicacionView.toogle(ser)}"
+
+                                                   style="margin-left: 5px;"/>
+                                </div>
+                                <div class="footer">
+                                    <p:commandButton value="Agendar" styleClass="rounded-button ui-button-success"
+                                                     style="padding: 0.4rem; width: 150px; background: #036554;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </ui:repeat>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</ui:component>

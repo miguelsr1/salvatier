@@ -4,42 +4,37 @@
 
 /* open-sans-300 - latin */
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Monserrat";
     font-style: normal;
     font-weight: 300;
-    src: url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-300.eot']}");
     /* IE9 Compat Modes */
-    src: local("Open Sans Light"), local("OpenSans-Light"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-300.eot']}?#iefix") format("embedded-opentype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-300.woff2']}") format("woff2"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-300.woff']}") format("woff"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-300.ttf']}") format("truetype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-300.svg']}#OpenSans") format("svg");
+    src: local("Monserrat-Light"), url("#{resource['poseidon-layout:fonts/Montserrat-Light.ttf']}") format("truetype");
     /* Legacy iOS */
 }
 /* open-sans-regular - latin */
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Monserrat";
     font-style: normal;
     font-weight: 400;
-    src: url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-regular.eot']}");
     /* IE9 Compat Modes */
-    src: local("Open Sans"), local("OpenSans"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-regular.eot']}?#iefix") format("embedded-opentype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-regular.woff2']}") format("woff2"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-regular.woff']}") format("woff"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-regular.ttf']}") format("truetype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-regular.svg']}#OpenSans") format("svg");
-    /* Legacy iOS */
+    src: local("Montserrat-Regular"), url("#{resource['poseidon-layout:fonts/Montserrat-Regular.ttf']}") format("truetype");    /* Legacy iOS */
 }
 /* open-sans-600 - latin */
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Monserrat";
     font-style: normal;
     font-weight: 600;
-    src: url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-600.eot']}");
     /* IE9 Compat Modes */
-    src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-600.eot']}?#iefix") format("embedded-opentype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-600.woff2']}") format("woff2"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-600.woff']}") format("woff"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-600.ttf']}") format("truetype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-600.svg']}#OpenSans") format("svg");
+    src: local("Montserrat-SemiBold"), url("#{resource['poseidon-layout:fonts/Montserrat-SemiBold.ttf']}") format("truetype");
     /* Legacy iOS */
 }
 /* open-sans-700 - latin */
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    src: url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-700.eot']}");
     /* IE9 Compat Modes */
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-700.eot']}?#iefix") format("embedded-opentype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-700.woff2']}") format("woff2"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-700.woff']}") format("woff"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-700.ttf']}") format("truetype"), url("#{resource['poseidon-layout:fonts/open-sans-v18-latin-ext_latin-700.svg']}#OpenSans") format("svg");
+    src: local("Monseerrat-Bold"), url("#{resource['poseidon-layout:fonts/Montserrat-Bold.ttf']}") format("truetype");
     /* Legacy iOS */
 }
 h1, h2, h3, h4, h5, h6 {
@@ -81,7 +76,7 @@ mark {
     background: #FFF8E1;
     padding: 0.25rem 0.4rem;
     border-radius: 5px;
-    font-family: "Open Sans";
+    font-family: "Monserrat";
 }
 
 blockquote {
@@ -2628,7 +2623,7 @@ body.exception-body .ui-button:focus {
     background-image: url("#{resource['images/div-background.webp']}");
     background-size: 100%;
     background-position: 85% 20%;
-    
+
     background-repeat: no-repeat;
     width: 100%;
     transition: background-size 0.5s ease;
@@ -2639,6 +2634,17 @@ body.exception-body .ui-button:focus {
     -ms-flex-align: center;
     align-items: center;
     padding: 60px 120px;
+}
+
+.landing-wrapper .landing-preguntas {
+    width: 100%;
+    transition: background-size 0.5s ease;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 35px;
 }
 .landing-wrapper .landing-promo .landing-promo-content > h2 {
     font-weight: 600;
@@ -2676,7 +2682,12 @@ body.exception-body .ui-button:focus {
 }
 .landing-wrapper .landing-testimonials {
     padding: 120px 120px 60px;
+    background-image: url("#{resource['images/testimonio-fondo.webp']}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 .landing-wrapper .landing-testimonials .testimonials {
     display: -ms-flexbox;
     display: flex;
@@ -2769,7 +2780,7 @@ body.exception-body .ui-button:focus {
     display: none;
 }
 .landing-wrapper .landing-pricing {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .landing-wrapper .landing-pricing .section-header {
     -ms-flex-pack: center;
@@ -4034,7 +4045,7 @@ html {
 }
 
 body {
-    font-family: "Open Sans";
+    font-family: "Monserrat";
     font-size: 14px;
     color: #515C66;
     -webkit-font-smoothing: antialiased;

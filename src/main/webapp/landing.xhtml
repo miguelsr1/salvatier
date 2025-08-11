@@ -46,9 +46,11 @@
             });
         });
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCvCDkYieuUBmMWon_mfLAfjuaeuosuqow&amp;sensor=true"></script>
 </h:head>
 
-<h:body styleClass="landing-body">
+<h:body styleClass="landing-body" style="max-width: 1935px; margin: 0 auto">
 
     <div class="landing-wrapper">
         <div class="landing-topbar" style="background: #036554 !important;">
@@ -63,22 +65,22 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#home">Equipo</a>
+                    <a href="#team">Equipo</a>
                 </li>
                 <li>
-                    <a href="#features">Misión y valores</a>
+                    <a href="#mision-vision">Misión y valores</a>
                 </li>
                 <li>
-                    <a href="#testimonials">Servicios</a>
+                    <a href="#services">Servicios</a>
                 </li>
                 <li>
                     <a href="#pricing">Comentarios</a>
                 </li>
                 <li>
-                    <a class="contact" href="#contact">Preguntas frecuentes</a>
+                    <a href="#questions">Preguntas frecuentes</a>
                 </li>
                 <li>
-                    <a class="contact" href="#contact">Ubicación</a>
+                    <a href="#locations">Ubicación</a>
                 </li>
             </ul>
             <p:commandButton value="Registrarse" style="margin-right: 2rem; padding: 1rem; background-color: white"
@@ -89,168 +91,17 @@
 
         <div style="height: 1rem; background: #C8AE80;"/>
 
-        <ui:include src="public/fragmento/landing/equipo-juridico.xhtml"/>
+        <ui:include src="public/fragmento/landing/team.xhtml"/>
 
         <ui:include src="public/fragmento/landing/mision-vision.xhtml"/>
 
-        <ui:include src="public/fragmento/landing/servicios-juridicos.xhtml"/>
+        <ui:include src="public/fragmento/landing/services.xhtml"/>
 
+        <ui:include src="public/fragmento/landing/questions.xhtml"/>
 
-        <div id="features" class="landing-features">
-            <div class="section-header">
-                <h2>Features</h2>
-                <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
-            </div>
+        <ui:include src="public/fragmento/landing/locations.xhtml"/>
 
-            <div class="features-content">
-                <div class="grid features-cards grid-nogutter">
-                    <div class="col-12 md:col-6 xl:col-3">
-                        <div class="feature-card responsive">
-                            <p:graphicImage name="images/landing/responsive.svg" library="poseidon-layout"/>
-                            <h5>Responsive Layout</h5>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3">
-                        <div class="feature-card design">
-                            <p:graphicImage name="images/landing/design.svg" library="poseidon-layout"/>
-                            <h5>Modern Design</h5>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3">
-                        <div class="feature-card documented">
-                            <p:graphicImage name="images/landing/documented.svg" library="poseidon-layout"/>
-                            <h5>Well Documented</h5>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3">
-                        <div class="feature-card cleancode">
-                            <p:graphicImage name="images/landing/code.svg" library="poseidon-layout"/>
-                            <h5>Clean Code </h5>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mi sed malesuada mollis. Nulla bibendum tortor est, eu tincidunt justo porta posuere.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="testimonials" class="landing-testimonials">
-            <div class="section-header">
-                <h2>Testimonials</h2>
-                <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
-            </div>
-            <div class="testimonials">
-                <div class="testimonials-wrapper">
-                    <div class="testimonials-content">
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Maecenas rutrum, orci nec lacinia auctor, enim lectus condimentum magna, pulvinar laoreet augue magna a turpis. Quisque id accumsan nulla. Nulla tempus est libero, ut mattis dui ullamcorper."</span>
-                                <h5>Trienke van Aartsen</h5>
-                                <h6>Porto</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Quisque a dui porta, volutpat metus sit amet, tincidunt velit. Suspendisse consequat lectus dui, sed ornare diam luctus vitae. In sapien risus, efficitur in mattis vitae, aliquam in lectus."</span>
-                                <h5>Xenie Doleželová</h5>
-                                <h6>Rabat</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Nulla auctor dignissim nunc, ut aliquam eros tincidunt et. Cras facilisis ex in ligula placerat venenatis. Vestibulum vitae tortor libero. Aenean venenatis tempor pretium. Pellentesque eget consectetur libero."</span>
-                                <h5>Abbie Wilson</h5>
-                                <h6>Belgrade</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Fusce hendrerit turpis lacus, et hendrerit magna tristique congue. Pellentesque lacus magna, consectetur eget orci id, ultricies euismod nisl. Donec turpis justo, semper id porttitor nec, ultrices eu."</span>
-                                <h5>Afonso Pinto</h5>
-                                <h6>Tbilisi</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Quisque a dui porta, volutpat metus sit amet, tincidunt velit. Suspendisse consequat lectus dui, sed ornare diam luctus vitae. In sapien risus, efficitur in mattis vitae, aliquam in lectus."</span>
-                                <h5>Bernd Pfefferberg</h5>
-                                <h6>Budapest</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Nam vel ipsum diam. Suspendisse egestas hendrerit ante, at aliquet enim condimentum vel. Sed rhoncus scelerisque arcu sed placerat. Quisque diam felis, condimentum quis mollis a, placerat vel."</span>
-                                <h5>Maria Illescas</h5>
-                                <h6>Edinburgh</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Ut dapibus diam at tortor ultrices, vel pretium nibh mollis. Praesent porta tellus at ipsum suscipit scelerisque. Donec lorem nulla, commodo ut dolor id, laoreet varius sem. Quisque."</span>
-                                <h5>Meng Ru</h5>
-                                <h6>Hangzhou</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial ">
-                            <div class="testimonial-content">
-                                <span>"Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In accumsan magna ac arcu porttitor, vel rutrum erat cursus. Maecenas cursus purus scelerisque, hendrerit quam."</span>
-                                <h5>Sun Jun</h5>
-                                <h6>Kinshasa</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial  ">
-                            <div class="testimonial-content">
-                                <span>"Aliquam commodo scelerisque metus nec viverra. Pellentesque dapibus vehicula ligula. Suspendisse ullamcorper elit ut ultrices venenatis. Sed vitae suscipit libero. Donec bibendum ex ac augue mollis, vel malesuada."</span>
-                                <h5>Thoma Fulloway</h5>
-                                <h6>Memphis</h6>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="link-points">
-                        <div class="points">
-                            <div class=" point point-1 active-point"></div>
-                            <div class=" point point-2 "></div>
-                            <div class=" point point-3 "></div>
-                            <div class=" point point-4 mobile "></div>
-                            <div class=" point point-5 mobile"></div>
-                            <div class=" point point-6 mobile"></div>
-                            <div class=" point point-7 mobile"></div>
-                            <div class=" point point-8 mobile"></div>
-                            <div class=" point point-9 mobile"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="contact" class="landing-contact">
-            <div class="section-header">
-                <h2>Contact</h2>
-                <h6>Modern and elegant responsive application template with a premium look for PrimeFaces components.</h6>
-            </div>
-            <div class="landing-contact-content">
-                <div class="landing-contact-form">
-                    <p:inputText id="name" placeholder="Full Name"/>
-                    <p:inputText id="email" placeholder="Email"/>
-                    <p:inputTextarea rows="8" placeholder="Your Message" autoResize="false"/>
-                    <p:commandButton type="button" value="SEND MESSAGE" styleClass="ui-button-info"/>
-                </div>
-            </div>
-
-        </div>
-        <div class="landing-footer">
-
-            <div class="social-icons">
-                <a><i class="fa fa-github"></i></a>
-                <a><i class="fa fa-facebook"></i></a>
-                <a><i class="fa fa-twitter"></i></a>
-            </div>
-        </div>
+        <ui:include src="public/fragmento/landing/footer.xhtml"/>
     </div>
     <h:outputStylesheet name="css/primeflex.min.css" library="poseidon-layout"/>
     <h:outputStylesheet name="css/primeicons.css" library="poseidon-layout"/>
